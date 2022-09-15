@@ -194,6 +194,21 @@ module.hot.accept(reloadCSS);
 
 require("./styles.css");
 
+var printButton = document.querySelector("#my-button");
+var addButton = document.querySelector("#add-data");
+printButton.addEventListener("click", function () {
+  console.log("hello world");
+  document.querySelector("h1").innerText = "My notebook";
+});
+addButton.addEventListener("click", function () {
+  var ul = document.querySelector("ul");
+  var textarea = document.querySelector("textarea");
+  var newLi = document.createElement("li");
+  newLi.innerText = textarea.value;
+  textarea.value = "";
+  ul.appendChild(newLi);
+});
+/*
 if (document.readyState !== "loading") {
   console.log("Document is ready!");
   initializeCode();
@@ -205,21 +220,27 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  var printButton = document.querySelector("#my-button");
-  var addButton = document.querySelector("#add-data");
+  const printButton = document.querySelector("#my-button");
+  const addButton = document.querySelector("#add-data")
+
   printButton.addEventListener("click", function () {
     console.log("hello world");
-    document.querySelector("h1").innerText = "My notebook";
+
+    document.querySelector("h1").innerText = "My notebook"
   });
+
   addButton.addEventListener("click", function () {
-    var ul = document.querySelector("ul");
-    var textarea = document.querySelector("textarea");
-    var newLi = document.createElement("li");
-    newLi.innerText = textarea.value;
-    textarea.value = "";
-    ul.appendChild(newLi);
-  });
+    const ul = document.querySelector("ul")
+    const textarea = document.querySelector("textarea")
+
+    let newLi = document.createElement("li")
+    newLi.innerText = textarea.value
+    textarea.value = ""
+
+    ul.appendChild(newLi)
+  })
 }
+*/
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

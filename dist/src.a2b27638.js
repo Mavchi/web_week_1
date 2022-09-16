@@ -204,8 +204,8 @@ addButton.addEventListener("click", function () {
   var ul = document.querySelector("ul");
   var textarea = document.querySelector("textarea");
   var newLi = document.createElement("li");
-  newLi.innerText = textarea.value;
-  textarea.value = "";
+  newLi.innerText = textarea.value; //textarea.value = ""
+
   ul.appendChild(newLi);
 });
 /*

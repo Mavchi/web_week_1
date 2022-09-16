@@ -16,7 +16,7 @@ const printButton = document.querySelector("#my-button");
 
     let newLi = document.createElement("li")
     newLi.innerText = textarea.value
-    textarea.value = ""
+    //textarea.value = ""
 
     ul.appendChild(newLi)
   })
